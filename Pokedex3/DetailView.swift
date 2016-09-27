@@ -10,7 +10,10 @@ import UIKit
 
 class DetailView: UIView {
 
-    func configureData() {
-        
+    @IBOutlet weak var pokemonImage: UIImageView!
+
+    func updateImage(ID id:Int)  {
+        pokemonImage.image = UIImage(named: "\(id)")
     }
+
 }

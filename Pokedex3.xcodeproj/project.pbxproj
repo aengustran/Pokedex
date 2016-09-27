@@ -15,12 +15,40 @@
 		3FAB876F1D99E79800AFEE2E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB876D1D99E79800AFEE2E /* LaunchScreen.storyboard */; };
 		3FAB87771D99E9BB00AFEE2E /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB87761D99E9BB00AFEE2E /* pokemon.csv */; };
 		3FAB877D1D99EAFF00AFEE2E /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB877C1D99EAFF00AFEE2E /* PokemonModel.swift */; };
+		3FAEF0CF1D9A9E0100120AEC /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAEF0CE1D9A9E0100120AEC /* Alamofire.framework */; };
+		3FAEF0D21D9A9E2600120AEC /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3FAEF0CE1D9A9E0100120AEC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FAEF0D51D9A9E3600120AEC /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3FAEF0CE1D9A9E0100120AEC /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		3FAEF0D71D9A9EC800120AEC /* PokemonAPIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAEF0D61D9A9EC800120AEC /* PokemonAPIParser.swift */; };
 		3FC8554B1D99F4FF0010E344 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8554A1D99F4FF0010E344 /* PokemonCellView.swift */; };
 		3FC8554D1D99FDF80010E344 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8554C1D99FDF80010E344 /* CSVParser.swift */; };
 		3FC855511D9A046D0010E344 /* PokemonHollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8554F1D9A046D0010E344 /* PokemonHollow.ttf */; };
 		3FC855521D9A046D0010E344 /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC855501D9A046D0010E344 /* PokemonSolid.ttf */; };
 		3FC855541D9A08160010E344 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC855531D9A08160010E344 /* music.mp3 */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3FAEF0D31D9A9E2600120AEC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FAEF0D21D9A9E2600120AEC /* Alamofire.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3FAEF0D41D9A9E2E00120AEC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3FAEF0D51D9A9E3600120AEC /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3F84B2B31D9A8CDE00A6CC49 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
@@ -33,6 +61,8 @@
 		3FAB87701D99E79800AFEE2E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3FAB87761D99E9BB00AFEE2E /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		3FAB877C1D99EAFF00AFEE2E /* PokemonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
+		3FAEF0CE1D9A9E0100120AEC /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Alamofire.framework; sourceTree = "<group>"; };
+		3FAEF0D61D9A9EC800120AEC /* PokemonAPIParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonAPIParser.swift; sourceTree = "<group>"; };
 		3FC8554A1D99F4FF0010E344 /* PokemonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		3FC8554C1D99FDF80010E344 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
 		3FC8554F1D9A046D0010E344 /* PokemonHollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonHollow.ttf; sourceTree = "<group>"; };
@@ -45,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAEF0CF1D9A9E0100120AEC /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,6 +101,7 @@
 		3FAB87631D99E79800AFEE2E /* Pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
+				3FAEF0D01D9A9E0400120AEC /* Frameworks */,
 				3FAB87781D99EAB900AFEE2E /* Model */,
 				3FAB87791D99EAC100AFEE2E /* View */,
 				3FAB877A1D99EAC500AFEE2E /* Controller */,
@@ -120,10 +152,19 @@
 			name = Resource;
 			sourceTree = "<group>";
 		};
+		3FAEF0D01D9A9E0400120AEC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3FAEF0CE1D9A9E0100120AEC /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		3FC8554E1D99FDFE0010E344 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				3FC8554C1D99FDF80010E344 /* CSVParser.swift */,
+				3FAEF0D61D9A9EC800120AEC /* PokemonAPIParser.swift */,
 			);
 			name = Helper;
 			sourceTree = "<group>";
@@ -138,6 +179,8 @@
 				3FAB875D1D99E79800AFEE2E /* Sources */,
 				3FAB875E1D99E79800AFEE2E /* Frameworks */,
 				3FAB875F1D99E79800AFEE2E /* Resources */,
+				3FAEF0D31D9A9E2600120AEC /* Embed Frameworks */,
+				3FAEF0D41D9A9E2E00120AEC /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -206,6 +249,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FAEF0D71D9A9EC800120AEC /* PokemonAPIParser.swift in Sources */,
 				3FC8554B1D99F4FF0010E344 /* PokemonCellView.swift in Sources */,
 				3F84B2B41D9A8CDE00A6CC49 /* DetailView.swift in Sources */,
 				3FAB87671D99E79800AFEE2E /* BrowserController.swift in Sources */,
@@ -335,6 +379,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 632SRZS6TP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pokedex3",
+				);
 				INFOPLIST_FILE = Pokedex3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengustran.Pokedex3;
@@ -348,6 +396,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 632SRZS6TP;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pokedex3",
+				);
 				INFOPLIST_FILE = Pokedex3/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.aengustran.Pokedex3;

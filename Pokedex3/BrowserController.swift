@@ -27,6 +27,10 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        PokemonAPIParser(pokemonIdentifier: 1) { 
+            print("sucess")
+        }
+
         // SET UP DATA SOURCE AND DELEGATE
         parsePokemonCSV()
         initAudio()
@@ -91,6 +95,7 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
             return UICollectionViewCell()
         }
     }
+    
 
     // EXECUTE WHEN A COLLECTION CELL IS SELECTED
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -103,11 +108,14 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
             selectedPokemon = pokemonArray[indexPath.row]
         }
 
-
+        detailView.updateImage(ID: selectedPokemon.pokedexID)
+        
+        // ANIMATE THE DETAIL VIEW AND BLACK VIEW
         if let window = UIApplication.shared.keyWindow {
+            view.endEditing(true)
             window.addSubview(blackView)
             window.addSubview(detailView)
-            detailView.configureData()
+            detailView.layer.cornerRadius = 10
 
             blackView.frame = window.frame
             blackView.backgroundColor = UIColor(white: 0, alpha: 0.5)
@@ -123,7 +131,7 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
 
             UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
                 self.blackView.alpha = 1
-                self.detailView.frame = CGRect(x: x, y: y - height, width: width, height: height)
+                self.detailView.frame = CGRect(x: x, y: y - height + 10, width: width, height: height)
             }, completion: nil)
 
         }
@@ -133,6 +141,7 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
 
     }
 
+    // DISMISS DETAIL VIEW AND BLACK VIEW
     func handleDismiss() {
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.blackView.alpha = 0
