@@ -6,10 +6,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Browser Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Pokedex3" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="BrowserController" customModule="Pokedex3" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -27,6 +27,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DU2-eT-Pp7">
                                 <subviews>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bVE-bD-Atp">
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="X9f-SK-eAI">
                                             <size key="itemSize" width="105" height="105"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -34,7 +35,7 @@
                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
-                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="vMM-NT-ryy">
+                                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PokemonCellViewIdentifier" id="vMM-NT-ryy" customClass="PokemonCellView" customModule="Pokedex3" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
@@ -64,6 +65,10 @@
                                                     <constraint firstItem="0et-hj-K5K" firstAttribute="leading" secondItem="vMM-NT-ryy" secondAttribute="leading" id="kVM-fG-lcY"/>
                                                     <constraint firstItem="0et-hj-K5K" firstAttribute="top" secondItem="vWm-QI-PFO" secondAttribute="bottom" id="mDo-zr-S0f"/>
                                                 </constraints>
+                                                <connections>
+                                                    <outlet property="nameLbl" destination="0et-hj-K5K" id="3sm-xY-WQg"/>
+                                                    <outlet property="thumbImg" destination="vWm-QI-PFO" id="eW0-3m-EPo"/>
+                                                </connections>
                                             </collectionViewCell>
                                         </cells>
                                     </collectionView>
@@ -98,6 +103,9 @@
                             <constraint firstAttribute="trailing" secondItem="bm5-C3-uzX" secondAttribute="trailing" id="zEG-yD-n6n"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pokemonCollectionView" destination="bVE-bD-Atp" id="KKU-3b-aJQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

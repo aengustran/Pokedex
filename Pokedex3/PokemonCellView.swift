@@ -8,17 +8,25 @@
 
 import UIKit
 
-class PokemonCellView: UITableViewCell {
+class PokemonCellView: UICollectionViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var thumbImg: UIImageView!
+    @IBOutlet weak var nameLbl: UILabel!
+    var pokemon: Pokemon!
+
+
+    // MODIFY THE CONER RADIUS OF COLLECTION CELL
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
+
+        layer.cornerRadius = 5.0
     }
 
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    // CONFIGURE THE DATA INSIDE THE COLLECTION CELL
+    func configureCell(_ pokemon: Pokemon)  {
+        self.pokemon = pokemon
+        nameLbl.text = self.pokemon.name.capitalized
+        thumbImg.image = UIImage(named: "\(self.pokemon.pokedexID)")
     }
 
 }
