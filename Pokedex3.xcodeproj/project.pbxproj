@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F84B2B41D9A8CDE00A6CC49 /* DetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F84B2B31D9A8CDE00A6CC49 /* DetailView.swift */; };
 		3FAB87651D99E79800AFEE2E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB87641D99E79800AFEE2E /* AppDelegate.swift */; };
 		3FAB87671D99E79800AFEE2E /* BrowserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB87661D99E79800AFEE2E /* BrowserController.swift */; };
 		3FAB876A1D99E79800AFEE2E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3FAB87681D99E79800AFEE2E /* Main.storyboard */; };
@@ -16,9 +17,13 @@
 		3FAB877D1D99EAFF00AFEE2E /* PokemonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FAB877C1D99EAFF00AFEE2E /* PokemonModel.swift */; };
 		3FC8554B1D99F4FF0010E344 /* PokemonCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8554A1D99F4FF0010E344 /* PokemonCellView.swift */; };
 		3FC8554D1D99FDF80010E344 /* CSVParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FC8554C1D99FDF80010E344 /* CSVParser.swift */; };
+		3FC855511D9A046D0010E344 /* PokemonHollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC8554F1D9A046D0010E344 /* PokemonHollow.ttf */; };
+		3FC855521D9A046D0010E344 /* PokemonSolid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 3FC855501D9A046D0010E344 /* PokemonSolid.ttf */; };
+		3FC855541D9A08160010E344 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3FC855531D9A08160010E344 /* music.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3F84B2B31D9A8CDE00A6CC49 /* DetailView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailView.swift; sourceTree = "<group>"; };
 		3FAB87611D99E79800AFEE2E /* Pokedex3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokedex3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FAB87641D99E79800AFEE2E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3FAB87661D99E79800AFEE2E /* BrowserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrowserController.swift; sourceTree = "<group>"; };
@@ -30,6 +35,9 @@
 		3FAB877C1D99EAFF00AFEE2E /* PokemonModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonModel.swift; sourceTree = "<group>"; };
 		3FC8554A1D99F4FF0010E344 /* PokemonCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonCellView.swift; sourceTree = "<group>"; };
 		3FC8554C1D99FDF80010E344 /* CSVParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSVParser.swift; sourceTree = "<group>"; };
+		3FC8554F1D9A046D0010E344 /* PokemonHollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonHollow.ttf; sourceTree = "<group>"; };
+		3FC855501D9A046D0010E344 /* PokemonSolid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = PokemonSolid.ttf; sourceTree = "<group>"; };
+		3FC855531D9A08160010E344 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,11 +70,11 @@
 		3FAB87631D99E79800AFEE2E /* Pokedex3 */ = {
 			isa = PBXGroup;
 			children = (
-				3FC8554E1D99FDFE0010E344 /* Helpers */,
-				3FAB877B1D99EAD700AFEE2E /* Files */,
-				3FAB877A1D99EAC500AFEE2E /* Controller */,
-				3FAB87791D99EAC100AFEE2E /* View */,
 				3FAB87781D99EAB900AFEE2E /* Model */,
+				3FAB87791D99EAC100AFEE2E /* View */,
+				3FAB877A1D99EAC500AFEE2E /* Controller */,
+				3FC8554E1D99FDFE0010E344 /* Helper */,
+				3FAB877B1D99EAD700AFEE2E /* Resource */,
 				3FAB87641D99E79800AFEE2E /* AppDelegate.swift */,
 				3FAB87681D99E79800AFEE2E /* Main.storyboard */,
 				3FAB876B1D99E79800AFEE2E /* Assets.xcassets */,
@@ -87,6 +95,7 @@
 		3FAB87791D99EAC100AFEE2E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3F84B2B31D9A8CDE00A6CC49 /* DetailView.swift */,
 				3FC8554A1D99F4FF0010E344 /* PokemonCellView.swift */,
 			);
 			name = View;
@@ -100,20 +109,23 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
-		3FAB877B1D99EAD700AFEE2E /* Files */ = {
+		3FAB877B1D99EAD700AFEE2E /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				3FC855531D9A08160010E344 /* music.mp3 */,
+				3FC8554F1D9A046D0010E344 /* PokemonHollow.ttf */,
+				3FC855501D9A046D0010E344 /* PokemonSolid.ttf */,
 				3FAB87761D99E9BB00AFEE2E /* pokemon.csv */,
 			);
-			name = Files;
+			name = Resource;
 			sourceTree = "<group>";
 		};
-		3FC8554E1D99FDFE0010E344 /* Helpers */ = {
+		3FC8554E1D99FDFE0010E344 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				3FC8554C1D99FDF80010E344 /* CSVParser.swift */,
 			);
-			name = Helpers;
+			name = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,7 +191,10 @@
 			files = (
 				3FAB876F1D99E79800AFEE2E /* LaunchScreen.storyboard in Resources */,
 				3FAB876C1D99E79800AFEE2E /* Assets.xcassets in Resources */,
+				3FC855511D9A046D0010E344 /* PokemonHollow.ttf in Resources */,
+				3FC855521D9A046D0010E344 /* PokemonSolid.ttf in Resources */,
 				3FAB87771D99E9BB00AFEE2E /* pokemon.csv in Resources */,
+				3FC855541D9A08160010E344 /* music.mp3 in Resources */,
 				3FAB876A1D99E79800AFEE2E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -192,6 +207,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3FC8554B1D99F4FF0010E344 /* PokemonCellView.swift in Sources */,
+				3F84B2B41D9A8CDE00A6CC49 /* DetailView.swift in Sources */,
 				3FAB87671D99E79800AFEE2E /* BrowserController.swift in Sources */,
 				3FAB877D1D99EAFF00AFEE2E /* PokemonModel.swift in Sources */,
 				3FAB87651D99E79800AFEE2E /* AppDelegate.swift in Sources */,

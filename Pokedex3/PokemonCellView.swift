@@ -19,7 +19,7 @@ class PokemonCellView: UICollectionViewCell {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        layer.cornerRadius = 5.0
+        layer.cornerRadius = 10
     }
 
     // CONFIGURE THE DATA INSIDE THE COLLECTION CELL
