@@ -19,32 +19,44 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
         super.viewDidLoad()
 
         // SET UP DATA SOURCE AND DELEGATE
+        parsePokemonCSV()
         pokemonCollectionView.dataSource = self
         pokemonCollectionView.delegate = self
-        parsePokemonCSV()
 
     }
+
 
 
     func parsePokemonCSV() {
-        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")
+        let path = Bundle.main.path(forResource: "pokemon", ofType: "csv")!
         do {
-    }
+            let csv = try CSV(contentsOfURL: path)
+            let rows = csv.rows
 
+            for eachRow in rows {
+                let pokemonID = Int(eachRow["id"]!)!
+                let name = eachRow["identifier"]!
+                pokemonArray.append(Pokemon(name: name, pokedexID: pokemonID))
+            }
+
+        }catch{
+
+        }
+    }
 
 
     // SETTING UP THE CELL
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "PokemonCellViewIdentifier", for: indexPath) as? PokemonCellView {
-            
-            let pokemon = Pokemon(name:"Pokemon", pokedexID: indexPath.row)
-            cell.configureCell(pokemon)
+
+            cell.configureCell(pokemonArray[indexPath.row])
 
             return cell
         } else {
             return UICollectionViewCell()
         }
     }
+
 
     // EXECUTE WHEN A COLLECTION CELL IS SELECTED
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -59,7 +71,7 @@ class BrowserController: UIViewController, UICollectionViewDelegate, UICollectio
     // SET UP THE NUMBER OF ITEMS IN SECTION
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return 30
+        return pokemonArray.count
     }
 
     // SET UP THE SIZE OF EACH CELL
